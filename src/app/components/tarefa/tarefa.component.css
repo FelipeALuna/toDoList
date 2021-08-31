@@ -1,0 +1,26 @@
+input[type=checkbox]{
+	cursor: pointer;
+}
+tr{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;; 
+    text-align: center;   
+}
+td{
+    text-align: center;   
+}
+
+
+i{
+	cursor: pointer;
+	opacity: .8;
+    vertical-align: middle;
+    
+}
+
+i:hover{
+	opacity: 1;
+}
