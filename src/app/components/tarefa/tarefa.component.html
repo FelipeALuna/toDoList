@@ -1,12 +1,18 @@
 <tr>
-    <td class="checkbox">
-        <input type="checkbox" >
+    <td class="checkbox" >
+        <input type="checkbox" (click)="done()">
     </td>
     <td class="titulo">
         {{tarefa.titulo}}
     </td>
-    <td class="prioridade">
-        {{tarefa.prioridade}}
+    <td class="prioridade" *ngIf="tarefa.prioridade==1">
+        Prioridade Baixa
+    </td>
+    <td class="prioridade" *ngIf="tarefa.prioridade==2">
+        Prioridade Média
+    </td>
+    <td class="prioridade" *ngIf="tarefa.prioridade==3">
+        Prioridade Alta
     </td>
     <td class="delete">
         <i class="material-icons">delete</i>

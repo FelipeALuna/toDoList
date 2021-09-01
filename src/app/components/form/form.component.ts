@@ -11,7 +11,7 @@ import { TarefaService } from 'src/app/services/tarefa.service';
 export class FormComponent implements OnInit {
 
   tarefaService: TarefaService = new TarefaService();
-  inputUsuario:string = 'teste';
+  inputUsuario:string = '';
 
   constructor() { }
 
@@ -20,6 +20,6 @@ export class FormComponent implements OnInit {
 
   criarTarefa(event:Event):void {
     event.preventDefault();
-    this.tarefaService.createTarefa();
+    this.tarefaService.createTarefa(this.inputUsuario);
   }
 }

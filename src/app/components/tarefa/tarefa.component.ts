@@ -9,10 +9,13 @@ import { Tarefa } from 'src/models/Tarefa';
 })
 export class TarefaComponent implements OnInit {
   @Input() tarefa!:Tarefa;
-  
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  done(){
+    
   }
 
 }

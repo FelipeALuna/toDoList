@@ -3,23 +3,7 @@ import { Injectable } from '@angular/core';
 import { Tarefa } from 'src/models/Tarefa';
 import { Prioridade } from 'src/models/Prioridade';
 
-const TAREFAS:Tarefa[] = [
-  {
-    titulo: "limpar casa",
-    feito: true,
-    prioridade: Prioridade.Alta
-  },
-  {
-    titulo: "lavar louça",
-    feito: true,
-    prioridade: Prioridade.Media
-  },
-  {
-    titulo: "Fazer curso",
-    feito: true,
-    prioridade: Prioridade.Alta
-  },
-]
+const TAREFAS:Tarefa[] = []
 @Injectable({
   providedIn: 'root'
 })
@@ -30,11 +14,20 @@ export class TarefaService {
   getTarefa(){
     return TAREFAS;
   }
-  createTarefa(){
+  createTarefa(inputUsuario:string){
+    let prioridade:Prioridade = Prioridade.Baixa;
+    let input:any = inputUsuario.split('#');
+    if(input[1]=='2'){
+      prioridade = Prioridade.Media
+    }
+    if(input[1]=='3'){
+      prioridade = Prioridade.Alta
+    }
+    
     TAREFAS.push({
-      titulo: "criando tarefa",
-      feito: true,
-      prioridade: Prioridade.Media
+      titulo: input[0],
+      feito: false,
+      prioridade: prioridade
     });
   }
 
