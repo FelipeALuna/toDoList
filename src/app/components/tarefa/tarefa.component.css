@@ -24,3 +24,7 @@ i{
 i:hover{
 	opacity: 1;
 }
+.done{
+   
+    text-decoration: line-through;
+}

@@ -14,8 +14,10 @@ export class TarefaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  done(){
+  done(): void {
+    this.tarefa.feito =  !this.tarefa.feito
+  }
+  delete(){
     
   }
-
 }
