@@ -1,7 +1,7 @@
 <main>
     <form id="form">
         <input type="text" name="inputUsuario" placeholder="Digite sua tarefa" [(ngModel)]="inputUsuario">
-        <button (click)="criarTarefa($event)">Salvar</button>
+        <button type="button" (click)="criarTarefa()">Salvar</button>
     </form>
     <app-lista-de-tarefas></app-lista-de-tarefas>
 </main>

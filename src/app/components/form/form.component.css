@@ -22,6 +22,7 @@ form button {
 	display: block;
 	font-size: .7rem;
 	border: none;
+	cursor: pointer;
 }
 
 table{
@@ -58,7 +59,4 @@ td:nth-child(4){
 	width: 36px;
 }
 
-tr.done td:nth-child(2){
-	text-decoration: line-through;
-}
 

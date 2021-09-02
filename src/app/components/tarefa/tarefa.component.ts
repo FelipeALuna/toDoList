@@ -1,7 +1,7 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { Tarefa } from 'src/models/Tarefa';
-
+import { TarefaService } from 'src/app/services/tarefa.service';
 @Component({
   selector: 'app-tarefa',
   templateUrl: './tarefa.component.html',
@@ -9,7 +9,7 @@ import { Tarefa } from 'src/models/Tarefa';
 })
 export class TarefaComponent implements OnInit {
   @Input() tarefa!:Tarefa;
-
+  tarefaService = new TarefaService();
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +17,5 @@ export class TarefaComponent implements OnInit {
   done(): void {
     this.tarefa.feito =  !this.tarefa.feito
   }
-  delete(){
-    
-  }
+  
 }

@@ -12,10 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaDeTarefasComponent implements OnInit {
   tarefas: Tarefa[] = [];
-  tService: TarefaService = new TarefaService();
+  private tService: TarefaService = new TarefaService();
 
   constructor() {
     this.tarefas = this.tService.getTarefa();
+    alert()
   }
 
   ngOnInit(): void {

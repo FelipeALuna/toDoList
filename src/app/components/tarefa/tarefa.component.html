@@ -8,16 +8,27 @@
     <td class="titulo" *ngIf="!tarefa.feito" >
         {{tarefa.titulo}}
     </td>
-    <td class="prioridade" *ngIf="tarefa.prioridade==1">
+    <td class="prioridade" *ngIf="tarefa.prioridade==1&&!tarefa.feito">
         Prioridade Baixa
     </td>
-    <td class="prioridade" *ngIf="tarefa.prioridade==2">
+    <td class="prioridade" *ngIf="tarefa.prioridade==2&&!tarefa.feito">
         Prioridade Média
     </td>
-    <td class="prioridade" *ngIf="tarefa.prioridade==3">
+    <td class="prioridade" *ngIf="tarefa.prioridade==3&&!tarefa.feito">
         Prioridade Alta
     </td>
+
+    <td class="prioridade done" *ngIf="tarefa.prioridade==1&&tarefa.feito">
+        Prioridade Baixa
+    </td>
+    <td class="prioridade done" *ngIf="tarefa.prioridade==2&&tarefa.feito">
+        Prioridade Média
+    </td>
+    <td class="prioridade done" *ngIf="tarefa.prioridade==3&&tarefa.feito">
+        Prioridade Alta
+    </td>
+
     <td class="delete">
-        <i class="material-icons" (click)="delete()">delete</i>
+        <i class="material-icons" >delete</i>
     </td>
 </tr>
